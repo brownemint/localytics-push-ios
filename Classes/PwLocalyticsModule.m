@@ -117,7 +117,7 @@
 {
     NSString *name = [TiUtils stringValue:[args objectAtIndex:0]];
     
-    if ( [args length] > 1 && [args objectAtIndex:1] != nil )
+    if ( [args objectAtIndex:1] != nil )
     {
         NSDictionary *options = (NSDictionary *)[args objectAtIndex:1];
         [[LocalyticsSession shared] tagEvent:name attributes:options];
