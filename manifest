@@ -2,7 +2,7 @@
 # this is your module manifest and used by Titanium
 # during compilation, packaging, distribution, etc.
 #
-version: 0.1
+version: 0.2
 apiversion: 2
 description: Interface for the Localytics SDk to enable logging of events, screen visits and enable push notifications to be received.
 author: Michael Browne
