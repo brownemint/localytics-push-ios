@@ -58,9 +58,15 @@ Log a visit to a screen to create a screen map.
 	// Register for push
 	Ti.Network.registerForPushNotifications({
 		callback: function(evt){
-			if( !evt.inBackground ) {
-				alert( JSON.stringify(evt.data) );
-			}
+			alert( JSON.stringify(evt.data) );
+			
+			// Localytics does not seem to record taps through iOS
+			// So add the following if you'd like to track them
+			
+			var push_campaign = {};
+			push_campaign["Campaign ID"] = evt.data.ll.ca;
+			push_campaign["Creative ID"] = evt.data.ll.cr;
+			localytics.logEvent("Localytics Push Opened",push_campaign);
 		},
 		error: function(evt){
 			Ti.API.error( "Code: " + evt.code + " - " + evt.error );
