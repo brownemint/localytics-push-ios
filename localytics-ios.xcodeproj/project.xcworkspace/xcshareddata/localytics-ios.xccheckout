@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>7E722275-8515-433A-8C67-10395CB56996</string>
+	<key>IDESourceControlProjectName</key>
+	<string>localytics-ios</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>0C4D5677-53C1-4585-A452-A925F072D5AE</key>
+		<string>https://github.com/brownemint/localytics-push-ios.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>localytics-ios.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>0C4D5677-53C1-4585-A452-A925F072D5AE</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/brownemint/localytics-push-ios.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>0C4D5677-53C1-4585-A452-A925F072D5AE</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>0C4D5677-53C1-4585-A452-A925F072D5AE</string>
+			<key>IDESourceControlWCCName</key>
+			<string>localytics-ios</string>
+		</dict>
+	</array>
+</dict>
+</plist>

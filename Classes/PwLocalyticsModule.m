@@ -128,18 +128,44 @@
     }
 }
 
--(void)logScreen:(id)name
+-(void)logScreen:(id)args
 {
-    ENSURE_SINGLE_ARG(name, NSString);
+    NSString *name = [TiUtils stringValue:[args objectAtIndex:0]];
     [[LocalyticsSession shared] tagScreen:name];
 }
 
 #pragma mark App Delegate Methods
 
+/*+(void) load {
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(finishedLaunching:) name:@"UIApplicationDidFinishLaunchingNotification" object:nil];
+}*/
+
+-(void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler
+{
+    NSLog(@"Did Receive Remove Notification: Localytics");
+    
+    [[LocalyticsSession shared] handleRemoteNotification:userInfo];
+    completionHandler(UIBackgroundFetchResultNoData);
+}
+
+/*
 - (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo
 {
+    NSLog(@"Did Receive Remove Notification: Localytics");
+    
     // Handle situation when device is inActive!
     [[LocalyticsSession shared] handleRemoteNotification:userInfo];
-}
+}*/
+
+/*-(void)finishedLaunching:(NSDictionary *)launchOptions
+{
+    NSLog(@"Did Finish Launching with Options: Localytics");
+    
+    if ([[launchOptions allKeys] containsObject:UIApplicationLaunchOptionsRemoteNotificationKey])
+    {
+        [[LocalyticsSession shared] resume];
+        [[LocalyticsSession shared] handleRemoteNotification:[launchOptions objectForKey:UIApplicationLaunchOptionsRemoteNotificationKey]];
+    }
+}*/
 
 @end
