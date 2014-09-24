@@ -1,1 +1,5 @@
-Place your change log text here.  This file will be incorporated with your app at package time.
+### Version 0.6 ###
+After an event is logged upload session information immediatately!
+
+### Version 0.5 ###
+Changed the pauseSession method to upload before closing the session. 

@@ -97,8 +97,9 @@
 
 -(void)pauseSession
 {
-    [[LocalyticsSession shared] close];
+    // 16/09/2014 - Reversed order to upload first and then close
     [[LocalyticsSession shared] upload];
+    [[LocalyticsSession shared] close];
 }
 
 -(void)resumeSession
@@ -126,6 +127,9 @@
     {
         [[LocalyticsSession shared] tagEvent:name];
     }
+    
+    // Upload event information as soon as it is triggered!
+    [[LocalyticsSession shared] upload];
 }
 
 -(void)logScreen:(id)args
