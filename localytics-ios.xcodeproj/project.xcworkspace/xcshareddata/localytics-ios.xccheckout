@@ -10,29 +10,29 @@
 	<string>localytics-ios</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>0C4D5677-53C1-4585-A452-A925F072D5AE</key>
+		<key>3E4D7379B9B4C738233945F84E25B312C29C81F7</key>
 		<string>https://github.com/brownemint/localytics-push-ios.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>localytics-ios.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>0C4D5677-53C1-4585-A452-A925F072D5AE</key>
+		<key>3E4D7379B9B4C738233945F84E25B312C29C81F7</key>
 		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/brownemint/localytics-push-ios.git</string>
 	<key>IDESourceControlProjectVersion</key>
-	<integer>110</integer>
+	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>0C4D5677-53C1-4585-A452-A925F072D5AE</string>
+	<string>3E4D7379B9B4C738233945F84E25B312C29C81F7</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>0C4D5677-53C1-4585-A452-A925F072D5AE</string>
+			<string>3E4D7379B9B4C738233945F84E25B312C29C81F7</string>
 			<key>IDESourceControlWCCName</key>
 			<string>localytics-ios</string>
 		</dict>

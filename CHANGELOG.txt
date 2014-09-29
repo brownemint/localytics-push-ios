@@ -1,3 +1,6 @@
+### Version 0.7 ###
+iOS no longer uses the pause/resumeSession methods, but the inherited suspened and resumed methods to control the session
+
 ### Version 0.6 ###
 After an event is logged upload session information immediatately!
 

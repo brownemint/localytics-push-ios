@@ -95,18 +95,24 @@
     [[LocalyticsSession shared] upload];
 }
 
--(void)pauseSession
+-(void) suspend:(id)sender
 {
     // 16/09/2014 - Reversed order to upload first and then close
     [[LocalyticsSession shared] upload];
     [[LocalyticsSession shared] close];
 }
 
--(void)resumeSession
+-(void)resumed:(id)sender
 {
     [[LocalyticsSession shared] resume];
     [[LocalyticsSession shared] upload];
 }
+
+-(void)pauseSession
+{}
+
+-(void)resumeSession
+{}
 
 -(void)registerForPush:(id)deviceToken
 {
@@ -140,10 +146,6 @@
 
 #pragma mark App Delegate Methods
 
-/*+(void) load {
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(finishedLaunching:) name:@"UIApplicationDidFinishLaunchingNotification" object:nil];
-}*/
-
 -(void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler
 {
     NSLog(@"Did Receive Remove Notification: Localytics");
@@ -151,25 +153,5 @@
     [[LocalyticsSession shared] handleRemoteNotification:userInfo];
     completionHandler(UIBackgroundFetchResultNoData);
 }
-
-/*
-- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo
-{
-    NSLog(@"Did Receive Remove Notification: Localytics");
-    
-    // Handle situation when device is inActive!
-    [[LocalyticsSession shared] handleRemoteNotification:userInfo];
-}*/
-
-/*-(void)finishedLaunching:(NSDictionary *)launchOptions
-{
-    NSLog(@"Did Finish Launching with Options: Localytics");
-    
-    if ([[launchOptions allKeys] containsObject:UIApplicationLaunchOptionsRemoteNotificationKey])
-    {
-        [[LocalyticsSession shared] resume];
-        [[LocalyticsSession shared] handleRemoteNotification:[launchOptions objectForKey:UIApplicationLaunchOptionsRemoteNotificationKey]];
-    }
-}*/
 
 @end
